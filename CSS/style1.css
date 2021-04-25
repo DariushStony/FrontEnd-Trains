@@ -1,0 +1,424 @@
+body
+{
+    background: url("background.jpg");
+    /* background-repeat: no-repeat; */
+}
+
+nav
+{
+    padding: 50px 0px;
+    min-width: 500px;
+}
+
+nav ul
+{
+    background : linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 25%,
+        rgba(255, 255, 255, 0.2) 75%,
+        rgba(255, 255, 255, 0) 100% 
+    );
+
+    box-shadow : 
+        0 0  25px rgba(0, 0, 0, 0.1),
+        inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li
+{
+    display: inline-block;   
+}
+
+nav ul li a
+{
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: block;
+}
+
+#parent p:first-child
+{
+    color : green;
+    text-decoration: underline;
+}
+
+#parent p:last-child
+{
+    color : blue;
+    text-decoration: underline;
+}
+
+#hah::first-line
+{
+    color : white
+}
+
+div::selection
+{
+    background: #8bc34a;
+    color : #FFF;
+}
+
+#pse p::before
+{
+    content: url(pic.svg);
+}
+
+#wrap
+{
+    width : 210px;
+    height: 100px;
+    border: 1px solid #000000;
+    word-wrap: break-word;
+}
+
+@font-face
+{
+    font-family: Alger;
+    src: url("ALGER.TTF");
+}
+
+h1
+{
+    font-family: AlGER;
+}
+
+#gra
+{
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin:4px;
+    color:#FFF;
+    /* background: linear-gradient(DeepSkyBlue, Black); */
+    /* background: -webkit-linear-gradient(blue 20%, yellow 20%, green 85%); */
+    /* background: -webkit-linear-gradient(left, blue, green, white); */
+    /* background: -webkit-linear-gradient(bottom, blue, green, white); */
+    /* background: -webkit-linear-gradient(bottom right, blue, green, white); */
+    /* background: -webkit-linear-gradient(100deg, blue, green, white); */
+    /* background: repeating-linear-gradient(blue, green, 20px); */
+    /* background: -webkit-radial-gradient(green, yellow, blue); */
+    /* background: -webkit-radial-gradient(circle, green 40%, yellow 50%, blue 70%); */
+
+    /* background : -webkit-radial-gradient(top left, green, yellow, blue); */
+    /* background : -webkit-radial-gradient(top left, green 5%, yellow 15%, blue 60%); */
+}
+
+#size
+{
+    height: 150px;
+    width: 200px;
+    border : 1px solid #000;
+    background : url(pic.png) no-repeat 50% 50%;
+    /* background-size: 100px 100px; */
+    /* background-size: contain; */
+    background-size: cover;
+}
+
+#pad
+{
+    border: 2px dotted black;
+    padding : 20px;
+    /* background: lightblue; */
+    background-image: url(pic.svg);
+    background-clip: padding-box;
+}
+
+#con
+{
+    border: 2px dotted black;
+    padding : 20px;
+    background: lightblue;
+    background-clip: content-box;
+}
+
+#clip
+{
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+}
+
+#pic
+{
+    width: 400px;
+    height: 300px;
+    background-image: url(pic.png), url(../HTML/Daredevil_Poster.jpg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+}
+
+#img1
+{
+    opacity: 1;
+}
+
+#img2
+{
+    opacity: 0.5;
+}
+
+#img3
+{
+    opacity: 0.25;   
+}
+
+#tran
+{
+    transition: transform 5s ease-in;
+}
+
+#trans
+{
+    width: 50px;
+    height: 50px;
+    background: #32CD32;
+    transition: width 3s;
+}
+
+#trans:hover
+{
+    width: 250px;
+}
+
+#trform
+{
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(10deg);
+}
+
+div.positive
+{
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(10deg);
+}
+
+div.negative
+{
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(-10deg);
+}
+
+div.empty-div
+{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+div.green-div
+{
+    padding: 50px;
+    position: absolute;
+    background-color: #8bc32a;
+    border: 1px solid white;
+    transform-origin: 25% 75%;
+    transform: rotate(15deg);
+}
+
+#padd
+{
+    padding: 50px;
+    position: absolute;
+    background-color: #32CD32;
+    transform: translate(100px, 50px);
+    /* transform: skew(30deg); */
+}
+
+div.first
+{
+    width: 200px;
+    height: 100px;
+    background-color: #8BC34A;
+    transform: scale(0.7, 0.7);
+    color:white;
+}
+
+div.second
+{
+    margin: 60px;
+    width: 200px;
+    height: 100px;
+    background-color: #8bc34a;
+    transform: scale(1.5, 1.5);
+    /* transform: scale(1.5, 1.5) rotate(30deg); */
+    color:white;
+}
+
+/* @keyframes colorchange
+{
+    0% {background-color: red;}
+    100% {background-color: green;}
+}
+
+@keyframes colorchange1
+{
+    from {background-color: red;}
+    to {background-color: green;}
+} */
+
+@keyframes colorchange
+{
+    0% {background-color: red;}
+    50% {background-color: green;}
+    100% {background-color: blue;}
+}
+
+#anim
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: colorchange;
+    animation-duration: 1s;
+    animation-iteration-count : 5;
+    /* animation-direction: reverse; */
+}
+
+div.rotX
+{
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    color: white;
+    
+    transform: rotateX(150deg);
+}
+
+div.rotY
+{
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    color: white;
+    
+    transform: rotateY(150deg);
+}
+
+div.rotZ
+{
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    color: white;
+    
+    transform: rotateZ(150deg);
+}
+
+div.translate
+{
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    color: white;
+
+    /* transform: translateX(20px) translateY(50em) translateZ(-13px); */
+    transform: translate3d(20px, 50em, -13px);
+}
+
+div.test
+{
+    width: 300px;
+    height: 300px;
+    background-color: cornflowerblue;
+    color : white;
+}
+
+div.empty-divi
+{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 2px solid black;
+
+    perspective: 400px;
+}
+
+div.green-divi
+{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+
+    transform: rotateX(45deg);
+}
+
+img.drop-shadow
+{
+    filter : drop-shadow(5px 9px 2px blue);
+}
+
+img.grayscale
+{
+    filter: grayscale(100%);
+}
+
+img.sepia
+{
+    filter: sepia(50%);
+}
+
+img.sature
+{
+    filter:saturate(100%);
+}
+
+img.hue-rot
+{
+    filter: hue-rotate(180deg);
+}
+
+img.invert
+{
+    width: 400px;
+    height: 400px;
+
+    filter: invert(70%);
+}
+
+img.opacity
+{
+    width: 400px;
+    height: 400px;
+
+    filter: opacity(50%);
+}
+
+img.bright
+{
+    width: 400px;
+    height: 400px;
+
+    filter:brightness(0.5);
+}
+
+img.contrast
+{
+    width: 400px;
+    height: 400px;
+
+    filter: contrast(50%);
+}
+
+img.blur
+{
+    width: 400px;
+    height: 400px;
+
+    filter: blur(1px);
+}

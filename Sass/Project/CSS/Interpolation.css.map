@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../Train/Sass/Interpolation.scss"
+    ],
+    "names": [],
+    "file": "Interpolation.css"
+}

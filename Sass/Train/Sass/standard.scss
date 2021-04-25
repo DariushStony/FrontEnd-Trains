@@ -1,0 +1,111 @@
+// /*@import "reset";
+
+// body {
+//   font-family: Helvetica, sans-serif;
+//   font-size: 18px;
+//   color: $var;
+// }*/
+
+// $color-primary : orange;
+// $color-secondary : green;
+// $color-tertiary : royalblue;
+
+// $font-size-lg : 40px;
+// $font-size-mg : 30px;
+// $font-size-sm : 20px;
+
+// @function doubleFontSize($fontSize : 15px)
+// {
+//     @return ($fontSize * 2);
+// }
+
+// @mixin headingStyle($fontSize : $font-size-mg)
+// {
+//     color : $color-secondary;
+//     text-align : center;
+//     font-size : $fontSize;
+// }
+
+// @mixin transition($params...)
+// {
+//     transition: $params;
+//     -webkit-transition: $params;
+//     -moz-transition: $params;
+//     -o-transition: $params;
+// }
+
+// body
+// {
+//     direction: rtl;
+//     background-color: whitesmoke;
+// }
+
+// .nav
+// {
+//     // background-color: $color-primary;
+//     // background-color: lighten($color: $color-primary, $amount: 30);
+//     // background-color: darken($color: $color-primary, $amount: 30);
+//     // background-color: transparentize($color: $color-primary, $amount: 0.2);
+//     background-color : mix($color-primary, $color-secondary);
+
+//     ul li
+//     {
+//         list-style: none;
+//         display: inline-block;
+//         a
+//         {
+//             text-decoration: none;
+//             color : $color-secondary;
+//             font-size: $font-size-sm;
+
+//             display: block;
+
+//             padding: 10px;
+            
+//             &:hover
+//             {
+//                 color : white;
+//             }
+//         }
+//     }
+// }
+
+
+// %heading 
+// {
+//     color : $color-primary;
+//     background-color: $color-secondary;
+//     font-size : $font-size-sm;
+//     text-align: center;
+// }
+
+// .banner h1
+// {
+//     // @include headingStyle($font-size-lg);
+
+//     @extend %heading;
+
+//     &:hover
+//     {
+//         background-color: red;
+//     }
+// }
+
+// .footer h3
+// {
+//     // @include headingStyle($font-size-lg);
+//     // &:hover
+//     // {
+//     //     color : $color-tertiary;
+//     //     background-color: $color-primary;
+
+//     //     @include transition(color 2s, background-color 4s)
+//     // }
+
+//     @extend %heading;
+// }
+
+// .banner p
+// {
+//     font-size: doubleFontSize();
+// }

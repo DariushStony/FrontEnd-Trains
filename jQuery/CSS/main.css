@@ -1,0 +1,55 @@
+*
+{
+    background-color: whitesmoke;
+}
+
+p
+{
+    background-color: teal;
+    color: tomato;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18;
+}
+
+p.intro
+{
+    background-color: teal;
+    color: tomato;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18;
+}
+
+p.first
+{
+    background-color: rgb(0, 128, 0);
+    color: tomato;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18;
+}
+
+/* p.intro:hover{
+    background-color: black;
+}
+
+p.first:hover{
+    background-color: black;
+} */
+
+#divi
+{
+    display: block;
+    padding: 50px;
+    text-align: center;
+    background-color: red;
+    border: solid 2px #f5f5f5;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.test
+{
+    background-color: black;
+    color: red;
+    font-size: 25px;
+}

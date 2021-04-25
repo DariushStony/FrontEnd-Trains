@@ -1,0 +1,30 @@
+.numbers {
+  font-weight: 100;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.string {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.color {
+  color: red;
+  background-color: #fff;
+  border: #00ff04;
+  background: rgba(0, 255, 4, 0.5);
+  outline-color: #00ff80;
+}
+
+.list {
+  margin: 10px 20px 30px 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 2px solid red;
+}
+
+h1 {
+  color: red;
+}
+/*# sourceMappingURL=DataType.css.map */

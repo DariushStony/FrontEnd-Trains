@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function allowDrop(ev)
+            {
+                ev.preventDefault();
+            }
+            function drag(ev)
+            {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            function drop(ev)
+            {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>This is Most Important Header</h1>
+            <h3>This is less Important Header</h3>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+
+        <article style="background-color: tomato;">
+            <h1>This is Most Important Header</h1>
+            <p>This is a Paragraph</p>
+            
+            <section>
+                <h1>Section Header</h1>
+                <p>Section Paragraph</p>
+            </section>
+
+            <aside>
+                <p>gifts were delivered to you</p>
+            </aside>
+
+        </article>
+
+        <audio controls>
+            <source src = "resource/14 Frozen In Time.mp3" type="audio/mp3">
+        </audio>
+
+        <br/>
+
+        <audio src="resource/14 Frozen In Time.mp3" type="audio/mp3" controls autoplay loop>
+            Your Browser Can Not Play the audio track
+        </audio>
+
+        <video controls>
+            <source src="Daredevil_Poster.jpg" type="video/mp4">
+            Video is not supported by your Browser
+        </video>
+
+        <br/>
+        Status: <progress value="32" max="100" min="0"></progress>
+
+        <br/>
+
+        <div id="box"  ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        style="border:1px solid black;
+        width:200px; height: 200px;"></div>
+
+        <img id="image" src="Daredevil_Poster.jpg" draggable="true"
+        ondragstart="drag(event)" height="100" width="50"
+        alt="">
+
+        <svg width="200" height="200">
+            <circle cx="80" cy="80" r="50" fill="red" stroke="blue"/>
+            <rect width="150" height="250"fill="orange" 
+            x="100" y="100">
+        <animate attributeName="x" from="0" to="300"
+                dur="3s" fill="freeze" repeatCount="indefinite"/>
+            </rect>
+        </svg>
+
+        <br/>
+
+        <canvas id="canvas1" width="500" height="500" style="border:1px solid #000000;">
+        </canvas>
+
+        <form>
+            <label>Your Name:</label>
+            <input id="user" name="username" type="text"/>
+            <br>
+
+            <label for="email">Your email address:</label>
+            <input type="text" name="email" placeholder="email@example.com"/>
+            <br>
+
+            <label for="email">Your email address:</label>
+            <input type="text" name="email" autofocus/>
+            <br>
+
+            <label for="email">Your email address:</label>
+            <input type="text" name="email" required/>
+            <br>
+
+            <input type="search" name="searchbox" id="mysearch"/>
+            <br>
+
+            <input id="car" type="text" list="color">
+            <datalist id="color">
+                <option value="red"/>
+                <option value="green"/>
+                <option value="blue"/>
+            </datalist>
+            <br/>
+
+            <input id="email" name="email" type="email"
+                placeholder="example@example.com"/>
+            <br/>
+
+            <input id="url" name="url" type="url"
+                placeholder="example.com"/>
+            <br>
+
+            <input id="tel" name="tel" type="tel"
+                placeholder="555.55.1211"/>
+            <br>
+
+            <input type="submit" value="submit">
+        </form>
+
+        <script>
+            // var c = document.getElementById("canvas1");
+            // var ctx = c.getContext("2d");
+            /*ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();*/
+            
+            /*ctx.font = "bold 22px Tahoma";
+            ctx.textAlign = "start";
+            ctx.fillText("start", 10, 30);
+            ctx.translate(100, 150);
+            ctx.fillText("after translate", 10, 30);*/
+
+            /*ctx.fillStyle = "#00FF00";
+            ctx.fillRect(10, 10, 100, 100);
+
+            ctx.rotate((Math.PI / 180) * 25);
+
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(10, 10, 100, 100);*/
+
+            var canvas = document.getElementById("canvas1");
+            var ctx = canvas.getContext("2d");
+
+            ctx.font = "bold 22px Tahoma";
+            ctx.textAlign = "start";
+            ctx.fillText("start", 10, 30);
+
+            ctx.translate(100, 150);
+
+            ctx.fillText("after translate", 0, 0);
+
+            ctx.rotate(1);
+
+            ctx.fillText("after rotate", 0, 0);
+            
+            ctx.scale(1.5, 4);
+
+            ctx.fillText("after scale", 0, 20);
+
+        </script>
+
+        <br/>
+
+        <footer>
+            <h1>This is Most Important Footer</h1>
+            <h3>This is less Important Footer</h3>
+        </footer>
+    </body>
+</html>

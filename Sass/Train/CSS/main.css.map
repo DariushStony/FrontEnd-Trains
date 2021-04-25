@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CACJ;EACI,gBAAgB,EAAE,UAAU;CAC/B",
+    "sources": [
+        "../../SecondMethod/Sass/main.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

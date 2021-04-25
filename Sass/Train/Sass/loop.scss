@@ -1,0 +1,38 @@
+// $colors : (
+//     1 : red,
+//     2 : blue,
+//     3 : green,
+//     4 : yellow,
+//     5 : gray
+// );
+
+// p
+// {
+//     font-size: 30px;
+//     padding: 10px;
+// }
+
+// @for $i from 1 through 5
+// {
+//     .paragraph-#{$i}
+//     {
+//         background-color: map-get($map: $colors, $key: $i);
+//     }
+// }
+
+// $eachColors : red green blue gray yellow;
+
+// @each $color in $eachColors 
+// {
+//     .paragraph-#{$color}
+//     {
+//         @if($color == green)
+//         {
+//             background-color: pink;
+//         }
+//         @else
+//         {
+//             background-color: $color;
+//         }
+//     }
+// }

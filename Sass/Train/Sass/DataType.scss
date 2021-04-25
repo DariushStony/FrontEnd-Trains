@@ -1,0 +1,44 @@
+// .numbers
+// {
+//     font-weight: 100; //Integer
+//     line-height: 1.6; //Decimal
+//     font-size: 20px; //rem, em, %   
+// }
+
+// .string
+// {
+//     font-family: 'Courier New', Courier, monospace;
+//     font-weight: bold;
+//     font-style: italic;
+// }
+
+// .color
+// {
+//     color: red;
+//     background-color: #fff;
+//     border: rgb(0, 255, 4);
+//     background: rgba(0, 255, 4, 0.5);
+//     outline-color: hsl(150, 100, 50%);
+// }
+
+// .list
+// {
+//     margin: 10px 20px 30px 40px;
+//     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//     border: 2px solid red;
+// }
+
+// $colors: (
+//     primary : red,
+//     secondary : green,
+//     tertiary : blue
+// );
+
+// h1
+// {
+//     color: map-get($map: $colors, $key: primary);
+// }
+
+// //Boolean : true or false
+
+// //null : has no value

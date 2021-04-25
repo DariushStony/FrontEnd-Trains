@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+
+    <body>
+
+        <div>
+            <p>This is  paragraph which use type selector</p>
+            <p id="intro">This is  paragraph which use id selector</p>
+            <p class="first">This is  paragraph which use class selector</p>
+        </div>
+
+        <div id="test">
+            <p class="first">This is a <em>paragraph</em> which user descendant selector</p>
+        </div>
+
+        <br>
+
+        <p class="serif"> This is a paragraph shown in serif font.</p>
+        <p class="sansserif">This is a paragraph shown in sans-serif font.</p>
+        <p class="monospace">This is a paragraph shown in monospace font.</p>
+        <p class="cursive">This is a paragraph shown in cursive font.</p>
+        <p class="fantasy">This is a paragraph shown in fantasy font.</p>
+
+
+        <p class="small"> This is a paragraph</p>
+        <p class="medium">This is a paragraph</p>
+        <p class="large">This is a paragraph</p>
+        <p class="xlarge">This is a paragraph</p>
+        <p class="">This is a paragraph</p>
+
+        <p id="style">This is an italic paragraph</p>
+
+        <p class="normal">This paragraph is normal.</p>
+        <p class="italic">This paragraph is italic.</p>
+        <p class="oblique">This paragraph is oblique.</p>
+
+        <p class="light">This is a font with a "lighter" weight.</p>
+        <p class="bold">This is a font with a "bold" weight.</p>
+        <p class="bolder">This is a font with a "bolder" weight.</p>
+
+        <br>
+        <p class="normal_variant">This is normal paragraph</p>
+        <p class="small-caps">This is small-caps paragraph</p>
+
+        <p class="example">This is colored text</p>
+        This text outside of the paragraph is black
+
+        <br>
+        <br>
+        <p class="left">This paragraph is aligned to the <strong>left</strong></p>
+        <p class="right">This paragraph is aligned to the <strong>right</strong></p>
+        <p class="center">This paragraph is aligned to the <strong>center</strong></p>
+
+        <br>
+        <table border="1" cellpadding="2" cellspacing="0"
+                style="border: black; height: 150px;">
+            <tr>
+                <td class="top">Top</td>
+                <td class="middle">Middle</td>
+                <td class="bottom">Bottom</td>
+            </tr>
+
+        </table>
+        <br>
+
+        <p class="none">This is a paragraph</p>
+        <p class="iherit">This is a paragraph</p>
+        <p class="overline">This is a paragraph</p>
+        <p class="underline">This is a paragraph</p>
+        <p class="line-through">This is a paragraph</p>
+        <p class="blink">This is a paragraph</p>
+
+        <br>
+        <p class="indent">
+            This is an example of 
+            <strong>text-indent </strong> property. 
+            First line of our text is indented to the right in 60px. 
+            Besides pixels you can also use other measurement units, 
+            like pt, cm, em, etc. 
+        </p>
+
+        <br>
+        <h1 class="shadow">Text Shadow example</h1>
+
+        <p class="capital">
+            This is a capitalized paragarph
+        </p>
+        
+        <br>
+        <p class="normall">This paragraph has no additional letter-spacing applied.</p>
+        <p class="positive ">This paragraph is letter-spaced at 4px.</p>
+
+        <br>
+        <p class="normalll">This paragraph has no additional word-spacing applied.</p>
+        <p class="px">This paragraph is word-spaced at 30px.</p>
+        <br>
+
+        <p class="whitespace">
+            This paragraph has         multiple spaces      and
+            a line break, but it will be ignored, as we used the nowrap value. 
+        </p>
+
+        <br>
+        <p class="pre"> 
+            In the markup we have multiple            spaces 
+            and a line break. 
+        </p>
+        <p class="preline"> 
+            In the markup we have multiple            spaces 
+            and a line break, but in the result multiple spaces are ignored. 
+        </p>
+        <p class="prewrap"> 
+            In the markup we have              multiple 
+            spaces and a line break.
+        </p>
+
+        <br>
+        <p class="border">This is a paragraph with border</p>
+
+        <br>
+        <p class="border-sep">This is a paragraph with border</p>
+
+        <br>
+        <div class="divTest">
+            This is div
+            element
+        </div>
+
+        <p class="min">The <strong>minimum height </strong> of this paragraph is set to 100px.</p>
+        <p class="max">The<strong> maximum width </strong> of this paragraph is set to 100px.</p>
+
+        <br>
+        <p class="backColor">Background color of this paragraph is lightskyblue</p>
+
+        <div class="backImage">
+        </div>
+
+        <ol class="lower-alpha">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+        </ol>
+        <ul class="circle">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+        </ul>
+        <ul class="square">
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue</li>
+        </ul>
+
+        <table border="1px">
+            <caption>This is a Caption</caption>
+            <tr>
+                <td>Red</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <p>Table-layout is set to <strong>auto</strong></p>
+        <table class="auto">
+        <tr>
+            <td width=“10%">500.000.000.000.000</td>
+            <td width="90%">20.000</td>
+        </tr>
+        </table>
+
+        <p>Table-layout is set to <strong>fixed</strong></p>
+        <table class="fixed">
+        <tr>
+            <td width="10%">500.000.000.000.000</td>
+            <td width="90%">20.000</td>
+        </tr>
+        </table>
+        <br>
+
+        <p><a href="http://www.sololearn.com" target="_blank">
+            This link is hovered when we mouse over it
+        </a></p>
+
+        <p><a href="http://www.sololearn.com" target="_blank">
+            This link has no underline.
+        </a></p>
+        <br>
+
+        <span style="cursor: help;">
+            Do you think who I am?
+        </span>
+
+        <span class="testSpan">First paragraph.</span>
+        <span class="testSpan">Second paragraph.</span>
+        <span class="testSpan">Third paragraph.</span>
+        <span class="testSpan">Fourth paragraph.</span>
+        <span class="testSpan">Fifth paragraph.</span>
+        <br>
+
+        <h1>This is a heading</h1>
+        <div class="hidden">
+            This text will not display in browser.
+        </div>
+        <p>
+            This space above this paragraph is empty because
+            the visibility of the div element is set to hidden.
+        </p>
+        <br>
+
+        <p>Paragraph with no position.</p>
+        <p>Paragraph with no position.</p>
+        <p>Paragraph with no position.</p>
+        <p>Paragraph with no position.</p>
+        <p>Paragraph with no position.</p>
+        <p class="position_static">This paragraph has a static position.</p>
+        <br>
+
+        <p><img class="imgTest" src="pic.svg" />
+            This paragraph has an image that is floated to the <strong>right.</strong> 
+            It is highly recommended to add a margin to images so that the text does 
+            not get too close to the image. If you want your text to be easily read, you 
+            should always add a few pixels between words and borders, images, 
+            and other content. 
+        </p>
+        <br>
+
+        This paragraph is above the div element 
+        and is not affected by the float right property. 
+        <br/><br/>
+        <div class="floatTest">
+        <img src="pic.svg" />
+        </div>
+        This paragraph comes after the div element 
+        and is affected by the float right property. 
+        <br/><br class="clearing"/>
+        This paragraph is out of the floating group 
+        and is not affected by the float right property.
+        <br/> <br/>
+
+        <!-- <div class="overflow">
+            This text is inside the div element, which has a blue 
+            background color and is floated to the left. We set a specific 
+            height and width for the div element, and as you can see, 
+            the content cannot fit. 
+        </div> -->
+        <br>
+        <br>
+
+        <div class="blue">Blue</div>
+        <br>
+        <div class="red">Red</div>
+
+        <div class="borderRadius"> Rounded Corners </div>
+        <br>
+
+        <div class="boxShadow">Shadow</div>
+        <br>
+
+    </body>
+
+</html>

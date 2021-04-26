@@ -1,22 +1,7 @@
-class Foo extends React.Component{
-    constructor( props ){
-      super( props );
-    }
-      
-    handleClick(event){
-      console.log(this);
-    }
-      
-    render(){
-      return (
-        <button type="button" onClick={this.handleClick}>
-          Click Me
-        </button>
-      );
-    }
-  }
-  
-  ReactDOM.render(
-    <Foo />,
+const name = "Dariush Hadipour";
+const element = <h1>Hello, {name}!</h1>;
+
+ReactDOM.render(
+    element,
     document.getElementById("root")
-  );
+);

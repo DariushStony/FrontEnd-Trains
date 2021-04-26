@@ -6,65 +6,41 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Clock = function (_React$Component) {
-    _inherits(Clock, _React$Component);
+var Toggle = function (_React$Component) {
+    _inherits(Toggle, _React$Component);
 
-    function Clock(props) {
-        _classCallCheck(this, Clock);
+    function Toggle(props) {
+        _classCallCheck(this, Toggle);
 
-        var _this = _possibleConstructorReturn(this, (Clock.__proto__ || Object.getPrototypeOf(Clock)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
 
-        _this.state = { date: new Date() };
+        _this.state = { isToggleOn: true };
+
+        _this.handleClick = _this.handleClick.bind(_this);
         return _this;
     }
 
-    //Lifecycle Methods
-
-
-    _createClass(Clock, [{
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            var _this2 = this;
-
-            this.timerID = setInterval(function () {
-                _this2.tick();
-            }, 1000);
-        }
-    }, {
-        key: "componentWillUnmount",
-        value: function componentWillUnmount() {
-            clearInterval(this.timerID);
-        }
-    }, {
-        key: "tick",
-        value: function tick() {
-            this.setState({
-                date: new Date()
+    _createClass(Toggle, [{
+        key: "handleClick",
+        value: function handleClick() {
+            this.setState(function (state) {
+                return {
+                    isToggleOn: !state.isToggleOn
+                };
             });
         }
     }, {
         key: "render",
         value: function render() {
             return React.createElement(
-                "div",
-                null,
-                React.createElement(
-                    "h1",
-                    null,
-                    "Hello, World!"
-                ),
-                React.createElement(
-                    "h2",
-                    null,
-                    "It is ",
-                    this.state.date.toLocaleTimeString(),
-                    "."
-                )
+                "button",
+                { onClick: this.handleClick },
+                this.state.isToggleOn ? "ON" : "OFF"
             );
         }
     }]);
 
-    return Clock;
+    return Toggle;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Clock, null), document.getElementById("root"));
+ReactDOM.render(React.createElement(Toggle, null), document.getElementById("root"));

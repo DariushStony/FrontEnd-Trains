@@ -1,22 +1,18 @@
-function Mailbox(props) {
-    var unreadMessages = props.unreadMessages;
+function NumberList(props) {
+    var numbers = props.numbers;
+    var listItems = numbers.map(function (number) {
+        return React.createElement(
+            'li',
+            { key: number.toString() },
+            number
+        );
+    });
     return React.createElement(
-        'div',
+        'ul',
         null,
-        React.createElement(
-            'h1',
-            null,
-            'Hello!'
-        ),
-        unreadMessages.length > 0 && React.createElement(
-            'h2',
-            null,
-            'You have ',
-            unreadMessages.length,
-            ' unread messages.'
-        )
+        listItems
     );
 }
 
-var messages = ['React', 'Re: React', 'Re:Re: React'];
-ReactDOM.render(React.createElement(Mailbox, { unreadMessages: messages }), document.getElementById("root"));
+var numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(React.createElement(NumberList, { numbers: numbers }), document.getElementById('root'));

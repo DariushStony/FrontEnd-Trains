@@ -6,41 +6,92 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Toggle = function (_React$Component) {
-    _inherits(Toggle, _React$Component);
+function UserGreeting(props) {
+    return React.createElement(
+        "h1",
+        null,
+        "Welcome back!"
+    );
+}
 
-    function Toggle(props) {
-        _classCallCheck(this, Toggle);
+function GuestGreeting(props) {
+    return React.createElement(
+        "h1",
+        null,
+        "Please Sign up."
+    );
+}
 
-        var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
+function Greeting(props) {
+    var isLoggedIn = props.isLoggedIn;
+    if (isLoggedIn) {
+        return React.createElement(UserGreeting, null);
+    }
+    return React.createElement(GuestGreeting, null);
+}
 
-        _this.state = { isToggleOn: true };
+function LoginButton(props) {
+    return React.createElement(
+        "button",
+        { onClick: props.onClick },
+        "Login"
+    );
+}
 
-        _this.handleClick = _this.handleClick.bind(_this);
+function LogoutButton(props) {
+    return React.createElement(
+        "button",
+        { onClick: props.onClick },
+        "Logout"
+    );
+}
+
+var LoginControl = function (_React$Component) {
+    _inherits(LoginControl, _React$Component);
+
+    function LoginControl(props) {
+        _classCallCheck(this, LoginControl);
+
+        var _this = _possibleConstructorReturn(this, (LoginControl.__proto__ || Object.getPrototypeOf(LoginControl)).call(this, props));
+
+        _this.handleLoginClick = _this.handleLoginClick.bind(_this);
+        _this.handleLogoutClick = _this.handleLogoutClick.bind(_this);
+
+        _this.state = { isLoggedIn: true };
         return _this;
     }
 
-    _createClass(Toggle, [{
-        key: "handleClick",
-        value: function handleClick() {
-            this.setState(function (state) {
-                return {
-                    isToggleOn: !state.isToggleOn
-                };
-            });
+    _createClass(LoginControl, [{
+        key: "handleLoginClick",
+        value: function handleLoginClick() {
+            this.setState({ isLoggedIn: true });
+        }
+    }, {
+        key: "handleLogoutClick",
+        value: function handleLogoutClick() {
+            this.setState({ isLoggedIn: false });
         }
     }, {
         key: "render",
         value: function render() {
+            var isLoggedIn = this.state.isLoggedIn;
+            var button = void 0;
+            if (isLoggedIn) {
+                button = React.createElement(LogoutButton, { onClick: this.handleLogoutClick });
+            } else {
+                button = React.createElement(LoginButton, { onClick: this.handleLoginClick });
+            }
+
             return React.createElement(
-                "button",
-                { onClick: this.handleClick },
-                this.state.isToggleOn ? "ON" : "OFF"
+                "div",
+                null,
+                React.createElement(Greeting, { isLoggedIn: isLoggedIn }),
+                button
             );
         }
     }]);
 
-    return Toggle;
+    return LoginControl;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Toggle, null), document.getElementById("root"));
+ReactDOM.render(React.createElement(LoginControl, null), document.getElementById("root"));

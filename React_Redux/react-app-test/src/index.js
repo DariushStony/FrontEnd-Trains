@@ -2,48 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-class Containter extends React.Component {
+class Football extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { show: true };
 
-        this.delHeader = this.delHeader.bind(this);
+        this.shoot = this.shoot.bind(this);
     }
-
-    delHeader() {
-        this.setState({
-            show: false
-        });
+    shoot(a) {
+        alert(a);
     }
-
-    render() {
-        let header;
-        if (this.state.show) {
-            header = <Child />;
-        }
-        return (
-            <div>
-                {header}
-                <button onClick={this.delHeader}>Delete</button>
-            </div>
-        );
-    }
-}
-
-class Child extends React.Component {
-
-    componentWillUnmount() {
-        alert("is about unmount");
-    }
-
     render() {
         return (
-            <h1>Hello, World!</h1>
+            <button onClick={this.shoot.bind(this, "Goal")}>Take the shot!</button>
         );
     }
 }
 
 ReactDOM.render(
-    <Containter />,
+    <Football />,
     document.getElementById("root")
 );

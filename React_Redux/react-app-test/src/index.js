@@ -2,42 +2,48 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-
-class Car extends React.Component {
+class Containter extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            brand: "Ford",
-            model: "Mustang",
-            color: "red",
-            year: 1964
-        };
+        this.state = { show: true };
+
+        this.delHeader = this.delHeader.bind(this);
     }
-    
-    changeColor = () => {
-        this.setState({ color: "blue" });
+
+    delHeader() {
+        this.setState({
+            show: false
+        });
     }
 
     render() {
+        let header;
+        if (this.state.show) {
+            header = <Child />;
+        }
         return (
             <div>
-                <h1>My {this.state.brand}</h1>
-                <p>
-                    It is a {this.state.color}
-                    {this.state.model}
-            from {this.state.year}.
-          </p>
-                <button
-                    type="button"
-                    onClick={this.changeColor}
-                >Change color</button>
+                {header}
+                <button onClick={this.delHeader}>Delete</button>
             </div>
         );
     }
 }
 
+class Child extends React.Component {
+
+    componentWillUnmount() {
+        alert("is about unmount");
+    }
+
+    render() {
+        return (
+            <h1>Hello, World!</h1>
+        );
+    }
+}
 
 ReactDOM.render(
-    <Car />,
+    <Containter />,
     document.getElementById("root")
 );

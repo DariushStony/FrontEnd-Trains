@@ -1,0 +1,53 @@
+button
+{
+    margin-left: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(235, 233, 233);
+    outline: none;
+    width: 60px;
+    height: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+    transition: 0.2s all;
+}
+
+button:hover{
+    width: 75px;
+}
+
+input[type="text"]
+{
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(235, 233, 233);
+    outline: none;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul  
+{
+    list-style: decimal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+ul li
+{
+    padding: 5px;
+    margin: 2px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(153, 212, 247);
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgb(122, 163, 238);
+    box-shadow: 2px 3px rgb(224, 230, 241);
+
+    color:rgb(11, 10, 117)
+}

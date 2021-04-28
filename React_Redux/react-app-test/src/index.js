@@ -1,29 +1,74 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import  './ss.css';
+import './style.css';
 
-class MyStyle extends React.Component {
+class AddPersonForm extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+
+        this.state = {
+            perosn: ""
+        };
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
+    handleChange(event) {
+        let person = event.target.value;
+        this.setState({
+            person: person
+        });
+    }
 
     render() {
-        const myStyle = {
-            color: "red",
-            backgroundColor: "black",
-            padding: "10px",
-            border: "1px solid blue"
-        };
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <input type="text" placeholder="Add New Contact"
+                    onChange={this.handleChange} />
+                <button type="submit">Add</button>
+            </form>
+        );
+    }
+}
+
+class Person extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const arr = this.props.data;
+        const listItems = arr.map((val, index) => {
+            return <li key={index}>{val}</li>;
+        });
+        return (
+            <ul>{listItems}</ul>
+        );
+    }
+}
+
+class ContactManager extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        let contacts = ["Dariush", "Kianoosh", "Behnam", "Zahra"];
         return (
             <div>
-                <h1 style={myStyle}>Hello World!</h1>
-                <p id="p1">Add a little Style!</p>
-                <p className="test">Add a little Style!</p>
+                <AddPersonForm />
+                <Person data={contacts} />
             </div>
         );
     }
-
 }
 
 ReactDOM.render(
-    <MyStyle />,
+    <ContactManager />,
     document.getElementById("root")
 );

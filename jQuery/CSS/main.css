@@ -53,3 +53,17 @@ p.first:hover{
     color: red;
     font-size: 25px;
 }
+
+div{
+    background-color: brown;
+}
+
+p{
+    background-color: yellowgreen;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 600;
+}

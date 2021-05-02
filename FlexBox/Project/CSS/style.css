@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Vazir;
+    src: url("../fonts/Vazir.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Vazir', Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}

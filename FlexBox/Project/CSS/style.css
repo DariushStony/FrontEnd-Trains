@@ -20,9 +20,20 @@ a {
 
 /* Utility Classes */
 
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
 .bg-dark {
     background-color: #333;
     color: white;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
 }
 
 .text-primary {
@@ -120,4 +131,24 @@ a {
     align-items: center;
     height: 100%;
     color: white;
+}
+
+#section1 .items {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 1rem;
+}
+
+#section1 .items .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+#section1 .items .item i {
+    background: orange;
+    padding: 1.25rem;
+    border-radius: 50%;
 }

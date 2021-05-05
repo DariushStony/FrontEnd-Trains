@@ -41,7 +41,11 @@ a {
 }
 
 .l-heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+.m-heading {
+    font-size: 1.5rem;
 }
 
 .bold {
@@ -57,9 +61,23 @@ a {
     border-radius: 5px;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .btn:hover {
     color: orange;
     background: white;
+}
+
+.list {
+    margin: 0.50rem;
+    list-style: none;
+}
+
+.list li {
+    border-bottom: #444 dotted 1px;
+    padding: 0.5rem 0;
 }
 
 .m-1 {
@@ -84,6 +102,18 @@ a {
 
 .p-3 {
     padding: 3rem;
+}
+
+.py-1 {
+    padding: 1.25rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
 }
 
 /*  */
@@ -152,3 +182,20 @@ a {
     padding: 1.25rem;
     border-radius: 50%;
 }
+
+#section2 {
+    display: flex;
+}
+
+#section2 div {
+    flex: 1;
+}
+
+#section2 .img {
+    background: url(../img/background.jpg) no-repeat center center/cover;
+}
+
+#section2 .content {
+    text-align: right;
+}
+

@@ -40,6 +40,10 @@ a {
     color: orange
 }
 
+.text-center {
+    text-align: center;
+}
+
 .l-heading {
     font-size: 2.5rem;
 }
@@ -199,3 +203,43 @@ a {
     text-align: right;
 }
 
+#section3 .items {
+    display: flex;
+}
+
+#section3 .items div {
+    flex: 1;
+}
+
+#section3 .items img {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+}
+
+#contact .contact-form {
+    flex-basis: 600px;
+    text-align: right;
+}
+
+#contact .contact-form label {
+    display: block;
+    margin: 1rem 0;
+}
+
+#contact .contact-form input, #contact .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

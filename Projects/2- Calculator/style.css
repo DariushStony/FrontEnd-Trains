@@ -1,4 +1,50 @@
-*, *::before, *::after {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    width: 99vw;
+    height: 99vh;
+}
+
+table {
+    margin: 50px auto;
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+
+.output-data {
+    padding: 30px;
+    text-align: right;
+    border-bottom: solid 2px black;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+button {
+    width: 80px;
+    height: 70px;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    border: solid 1px white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, .90);
+}
+
+/* *, *::before, *::after {
     box-sizing: border-box;
     font-family: "JetBrains Mono", 'Courier New', Courier, monospace;
     font-weight: normal;
@@ -55,4 +101,4 @@ body {
 .output .current-operand {
     color: white;
     font-size: 2.5rem;
-}
+} */

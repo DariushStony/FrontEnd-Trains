@@ -1,9 +1,14 @@
-const numberElements = document.querySelectorAll("[data-number]");
-const plusOperatorElement = document.querySelector("[data-operation]");
-const equalElement = document.querySelector("[data-equals]");
+const numberButtons = document.querySelectorAll("[data-number]");
+const operatorButtons = document.querySelectorAll("[data-operation]");
+const equalsButtons = document.querySelector("[data-equals]");
+const allClearButton = document.querySelector("[data-all-clear]");
+const deleteButton = document.querySelector("[data-delete]");
+const dotButton = document.querySelector("[data-dot]");
 const output = document.querySelector(".output-data");
 
-numberElements.forEach((number) => {
+const operations = ["+", "-", "÷", "*"];
+
+numberButtons.forEach((number) => {
     let numberValue = parseInt(number.innerText);
 
     number.addEventListener("click", () => {
@@ -11,11 +16,43 @@ numberElements.forEach((number) => {
     });
 });
 
-plusOperatorElement.addEventListener("click", () => {
-    output.innerText += "+";
+operatorButtons.forEach((operator) => {
+
+    operator.addEventListener("click", () => {
+        let outputText = output.innerText;
+        let lastItem = outputText.charAt(outputText.length - 1);
+
+        if (operations.includes(lastItem)) {
+            output.innerText = outputText.substring(0, outputText.length - 1) + operator.innerText;
+        }
+        else {
+            output.innerText += operator.innerText;
+        }
+    });
+
 });
 
-equalElement.addEventListener("click", () => {
+allClearButton.addEventListener("click", () => {
+    output.innerText = "";
+});
+
+deleteButton.addEventListener("click", () => {
+    let outputText = output.innerText;
+    output.innerText = outputText.substring(0, outputText.length - 1);
+});
+
+dotButton.addEventListener("click", () => {
+    let outputText = output.innerText;
+    let lastItem = outputText.charAt(outputText.length - 1);
+
+    if (lastItem !== ".") {
+        output.innerText +=  ".";
+    }
+   
+
+});
+
+equalsButtons.addEventListener("click", () => {
     output.innerText = eval(output.innerText);
 });
 

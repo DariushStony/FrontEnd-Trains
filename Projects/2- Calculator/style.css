@@ -21,7 +21,8 @@ table {
 }
 
 .output-data {
-    padding: 30px;
+    padding: 10px;
+    height: 92px;
     text-align: right;
     border-bottom: solid 2px black;
     background-color: rgba(0, 0, 0, 0.75);
@@ -42,6 +43,14 @@ button {
 
 button:hover {
     background-color: rgba(255, 255, 255, .90);
+}
+
+[data-all-clear]{
+    width: 160px;
+}
+
+[data-number="0"]{
+    width: 160px;
 }
 
 /* *, *::before, *::after {

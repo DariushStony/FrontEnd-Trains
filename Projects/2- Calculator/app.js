@@ -53,7 +53,11 @@ dotButton.addEventListener("click", () => {
 });
 
 equalsButtons.addEventListener("click", () => {
-    output.innerText = eval(output.innerText);
+    let outputText = output.innerText;
+
+    outputText = outputText.replace("÷", '/');
+
+    output.innerText = eval(outputText);
 });
 
 

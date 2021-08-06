@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lemonchiffon;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+    background-color: #3e3e3e;
+    border: solid 1px black;
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+}
+
+.watch {
+    color: rgb(211, 201, 201);
+    font-size: 6rem;
+}
+
+button {
+    background-color: #5555;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #1111;
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+.options button {
+    font-size: 2.5rem;
+    color: rgb(255, 68, 0);
+}
+
+.controller button {
+    font-size: 3rem;
+    color: rgb(14, 204, 14);
+}
+
+
+
